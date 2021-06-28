@@ -1,0 +1,16 @@
+{
+    "fixturesFolder": "./fixtures",
+	"integrationFolder": "./specs",
+	"pluginsFile": false,
+	"supportFile": "./support",
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
+	"chromeWebSecurity": false,
+	"requestTimeout": 30000,
+	"defaultCommandTimeout": 20000,
+	"pageLoadTimeout": 120000,
+	"env": {
+		"baseUrl": "https://sandbox-www.laybuy.com/nz/shop-here",
+		"getTilesRequest": "https://sandbox-shop-directory.laybuy.com/api//tiles?*"
+	}
+}

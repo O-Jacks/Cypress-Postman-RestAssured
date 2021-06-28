@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-06-29T08:44:35 NZST" name="Default suite" finished-at="2021-06-29T08:44:38 NZST" duration-ms="2778">
+    <groups>
+    </groups>
+    <test started-at="2021-06-29T08:44:35 NZST" name="Default test" finished-at="2021-06-29T08:44:38 NZST" duration-ms="2778">
+      <class name="GetUsersTests">
+        <test-method signature="testDennisSchulistExistsInList()[pri:0, instance:GetUsersTests@527e5409]" started-at="2021-06-29T08:44:35 NZST" name="testDennisSchulistExistsInList" finished-at="2021-06-29T08:44:36 NZST" duration-ms="1630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDennisSchulistExistsInList -->
+        <test-method signature="testRetrievingSingleUser()[pri:0, instance:GetUsersTests@527e5409]" started-at="2021-06-29T08:44:36 NZST" name="testRetrievingSingleUser" finished-at="2021-06-29T08:44:37 NZST" duration-ms="853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRetrievingSingleUser -->
+        <test-method signature="testStatusCodeOk()[pri:0, instance:GetUsersTests@527e5409]" started-at="2021-06-29T08:44:37 NZST" name="testStatusCodeOk" finished-at="2021-06-29T08:44:37 NZST" duration-ms="133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStatusCodeOk -->
+        <test-method signature="testTenRecordsReturned()[pri:0, instance:GetUsersTests@527e5409]" started-at="2021-06-29T08:44:37 NZST" name="testTenRecordsReturned" finished-at="2021-06-29T08:44:38 NZST" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTenRecordsReturned -->
+      </class> <!-- GetUsersTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

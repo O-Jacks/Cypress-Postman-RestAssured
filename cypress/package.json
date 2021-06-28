@@ -1,0 +1,14 @@
+{
+  "name": "cypress-practice",
+  "version": "1.0.0",
+  "description": "Simple Cypress test suite for testing LayBuy app",
+  "main": "index.js",
+  "author": "Oliver Jacks",
+  "license": "MIT",
+  "scripts": {
+    "open:sandbox": "node_modules/.bin/cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^7.6.0"
+  }
+}

@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "a1d2fa07-35ec-465e-b4ea-7b8ec1f1d9e1",
+		"name": "Postman users test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Status code is 200\", () => {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response returns 10 user records\", () => {",
+							"    pm.expect(jsonData.length).to.eql(10);",
+							"});",
+							"",
+							"pm.test(\"Can retrieve data for a single user\", () => {",
+							"    const userId = jsonData[0].id;",
+							"",
+							"    pm.sendRequest(pm.environment.get(\"baseUrl\") + \"?id=\" + userId.toString(), function (err, response) {",
+							"        return pm.collectionVariables.set(\"singleUserjsonData\", response.json());",
+							"    });",
+							"",
+							"    const newUsersRequest = pm.collectionVariables.get(\"singleUserjsonData\"); ",
+							"    pm.expect(newUsersRequest.length).to.eql(1);",
+							"    pm.expect(newUsersRequest[0].id).to.eql(userId);",
+							"});",
+							"",
+							"pm.test(\"User 'Mrs. Dennis Schulist' exists in list\", () => {",
+							"    var isExisting = jsonData.find(m => m.name === \"Mrs. Dennis Schulist\"); ",
+							"    pm.expect(isExisting.name).to.eql(\"Mrs. Dennis Schulist\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}",
+					"host": [
+						"{{baseUrl}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "singleUserResponse",
+			"value": ""
+		},
+		{
+			"key": "singleUserjsonData",
+			"value": ""
+		}
+	]
+}
